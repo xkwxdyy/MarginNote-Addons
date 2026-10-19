@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "commands": [
+    {
+      "name": "Public entry policy",
+      "argv": [
+        "node",
+        "ci/check-entry.mjs"
+      ]
+    }
+  ]
+}

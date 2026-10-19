@@ -1,0 +1,21 @@
+# The public entry repository owns only reviewed entry-point files.
+/Projects/
+/Tooling/
+/Reference/
+/Resources/
+/Packages/
+/Archive/
+/Worktrees/
+/MEMORY/
+/Local/
+/addon-workspace.local.json
+/.mcp.json
+/.codex/
+/.claude/
+/.agents/
+.DS_Store
+*.mnaddon
+*.marginpkg
+*.provisionprofile
+*.key
+*.pem

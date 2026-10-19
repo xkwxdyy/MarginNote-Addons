@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "projects": {
+    "mnknowledgebase": {
+      "path": "Projects/mnknowledgebase",
+      "payload": ".",
+      "repository": "xkwxdyy/MNKnowledgeBase"
+    },
+    "mncommentmanager": {
+      "path": "Projects/mncommentmanager",
+      "payload": ".",
+      "repository": "xkwxdyy/MNCommentManager"
+    }
+  }
+}
