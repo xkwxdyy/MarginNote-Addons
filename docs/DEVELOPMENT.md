@@ -2,6 +2,8 @@
 
 开发工作区采用独立仓库布局。总目录的 Git 仓库只管理公共说明、问题表单和配置模板，各插件的源码由对应仓库管理。
 
+私有[研发看板](https://github.com/users/xkwxdyy/projects/2)集中保存跨仓任务，并提供总表、开发看板和设备验收视图。看板访问权限沿用账户的私有项目设置。
+
 | 目录 | 职责 |
 | --- | --- |
 | `Projects/mnknowledgebase` | Knowledge Base 公共源码 |
@@ -28,6 +30,13 @@ npm run pack
 ```
 
 普通检查只运行明确列出的源码检查、回归和本地构建，不修改版本，不抓取更新，不安装插件，不上传、部署或推送。跨插件实现和内部验证记录保存在私有范围，公共检查不读取付费源码。
+
+完整私有工作区保留根目录的构建和抓取入口。入口接受原动作参数、显式 `--workspace` 和 `--output-dir`；`--plan` 只核对路径，不执行动作。公共仓库的独立检出需要另行配置私有工具后才能使用该入口。
+
+```sh
+sh batch_build_addons.sh --plugin mnpinner --plan
+sh batch_build_addons.sh --plugin mnpinner --ci --checks ci/commands.json
+```
 
 拉取请求应关联问题，并分别记录源码检查、包体校验和设备验收结果。拉取请求合并后，尚未完成 Mac 或 iPad 验收的问题继续保持开放。发布前需要明确记录源码提交、版本、渠道、安装包摘要和验证结果。
 
